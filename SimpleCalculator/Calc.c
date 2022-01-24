@@ -11,6 +11,8 @@
 
 long long pgcd(long long a, long long b)
 {
+	if (b == 0)
+		return 0;
 	long long res= a % b;
 	while (res != 0)
 	{
@@ -25,7 +27,7 @@ long long pgcd(long long a, long long b)
 
 int main(int argc, char* argv[])
 {
-	long long a = 12, b = 15;
+	long long a = 15, b = 0;
 	double res = pgcd(a,b);
 	printf("%f", res);
 	return 0;
