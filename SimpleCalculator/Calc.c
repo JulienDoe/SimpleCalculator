@@ -9,7 +9,7 @@
 
 
 
-long long pgcd(long long a, long long b)
+long long Pgcd(long long a, long long b)
 {
 	if (b == 0)
 		return 0;
@@ -24,11 +24,19 @@ long long pgcd(long long a, long long b)
 	return b;
 }
 
+long long Ppcd(long long a, long long b)
+{
+	if (a == 0 || b == 0)
+		return 0;
+	long res = Pgcd(a, b);
+	res = (a * b) / res;
+
+}
 
 int main(int argc, char* argv[])
 {
-	long long a = 15, b = 0;
-	double res = pgcd(a,b);
+	long long a = 255, b = 15400;
+	double res = Ppcd(a,b);
 	printf("%f", res);
 	return 0;
 }
