@@ -33,10 +33,20 @@ long long Ppcd(long long a, long long b)
 
 }
 
+long long Facto(long long a)
+{
+	long long res = a;
+	if (res == 0)
+		return 1;
+	for (int i = 1; i < a; i++)
+		 res = res * i;
+	return res;
+}
+
 int main(int argc, char* argv[])
 {
-	long long a = 255, b = 15400;
-	double res = Ppcd(a,b);
+	long long a = 4, b = 0;
+	double res = Facto(6);
 	printf("%f", res);
 	return 0;
 }
